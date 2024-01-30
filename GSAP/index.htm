@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <section class="sec">
+        <h1 class="h11">DRIVE AND HAVE FUN</h1>
+        <br>
+        <button class="btn1">EXPLORE MORE</button>
+    </section>
+
+    <section class="sec2">
+        <h1 class="h12">DRIVE AND HAVE FUN</h1>
+        <br>
+        <button class="btn2">EXPLORE MORE</button>
+    </section>
+
+
+    <script>
+        gsap.from(".sec",2,{
+            opcaity:0,
+            y:-1000,
+            delay:1
+        })
+        gsap.from(".h11",5,{
+            opcaity:0,
+            x:-1000,
+            delay:3
+        })
+        gsap.from(".btn1",5,{
+            opcaity:0,
+            x:1000,
+            delay:4
+        })
+        gsap.registerPlugin(ScrollTrigger) 
+        gsap.from(".sec2",{
+            scrollTrigger:".sec2",
+            opacity: 0,
+            delay:3,
+            x:1400,
+            duration:3,
+        })
+        gsap.from(".h12",{
+            scrollTrigger:".h12",
+            opacity: 0,
+            delay:6,
+            scale:3.5,
+            x:-1400,
+            duration:3,
+        })
+        gsap.from(".btn2",{
+            scrollTrigger:".btn2",
+            opacity: 0,
+            delay:6,
+            y:-1400,
+            duration:3,
+        })
+       
+    
+    </script>
+</body>
+</html>
